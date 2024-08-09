@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+
+<html>
+
+
+<head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title></title>
+
+
+</head>
+
+
+<body>
+
+
+<h1>view all users</h1>
+
+
+<table border=1 width=700>
+
+
+<tr><th>Name</th><<th>phone</th><th>email</th><th>username</th><th>update</th><
+
+
+</tr>
+
+
+{% for r in reg %}
+
+
+<tr>
+
+
+<td>{{ r.name}}</td><td>{{ r.phone }}</td><td>{{ r.email }}</td><td>{{ r.username}}/to
+
+
+<td><a href="{% url 'updatereg' r.id %}">Update</a></td><td></td>
+
+
+</tr>
+
+
+{% endfor %}
+
+
+</body>
+
+
+</html>
